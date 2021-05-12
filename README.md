@@ -30,6 +30,8 @@ The factor used to test this momentum effect is called connected-stock (CS) retu
  
 where 𝑅𝑒𝑡𝑗𝑡 is the return of stock j during month t, nij is the number of analysts who cover both stocks i and j, and N is the total number of stocks connected to stock i during the month. Stocks that are co-covered by a greater number of analysts are more likely to be similar to each other so they get a higher weight.
 
+Here, we define two stocks as “connected” if at least one analyst covers both stocks at the end of each month. If one research paper is written by more than 1 analysts, we use the first one because he/she is always the head of the research group. 
+
 ## Data
 The data used in this repo is divided into two types, the first is the information of companies with the analysts that wrote report towards them and the second is the stock information. The analyst data is yearly and the stock data is monthly. Because of security, the data cannot be uploaded, examples of these two types are shown below
 
@@ -71,12 +73,21 @@ To visulize,
 ![Port Return](https://github.com/algo21-116010293/Assignment2/blob/main/Testing%20Result/Return.png)
 
 ## Discussion
-From Rank IC and Portforlio Return above, we can see that the performance of CF Return is not that good. However, in the report
+From Rank IC and Portforlio Return above, we can see that the performance of CF Return is not that good. However, the statistics in the report [Shared Analyst Coverage:
+Unifying Momentum Spillover Effects](https://github.com/algo21-116010293/Assignment2/blob/main/Shared%20Analyst%20Coverage%20Unifying%20Momentum%20Spillover%20Effects.pdf) is quite good, we think the reasons may come from several respects. 
+
+* **First, the data in this report is from A-Share market while the data in the report is from NYSE, NASDAQ, and NYSE MKT. Different markets will bring different effect. **
+
+* **Second, in the report, a stock is considered to be covered by an analyst if the analyst issues at least one FY1 or FY2 earnings forecast for the stock over the past 12 months. However, this repo has not consider the grade that analysts gave to the stock yet. **
+
+* **Third, the construction of factor can consider more aspects like the number of analysts that cover the same stock. **
+
+
 
 ## Reference
 The basic paper that this repo base on is [Shared Analyst Coverage:
-Unifying Momentum Spillover Effects](https://github.com/algo21-116010293/Assignment1/blob/main/Reference/20170531-申万宏源-申万宏源风险预算模型下的基金组合构建：配置风险，优选基金.pdf)
+Unifying Momentum Spillover Effects](https://github.com/algo21-116010293/Assignment2/blob/main/Shared%20Analyst%20Coverage%20Unifying%20Momentum%20Spillover%20Effects.pdf)
 
 ## Code
-The codes used to calculate the CF Return are in the `cf.py` [CF code](https://github.com/algo21-116010293/Assignment1/blob/main/riskBudget.py) 
-The codes used to calculate the Indicator are `test.py`[test code](https://github.com/algo21-116010293/Assignment1/blob/main/riskBudget.py) 
+The codes used to calculate the CF Return are in the `cf.py` [CF code](https://github.com/algo21-116010293/Assignment2/blob/main/Code/cf.py) 
+The codes used to calculate the Indicator are `test.py`[test code](https://github.com/algo21-116010293/Assignment2/blob/main/Code/test.py) 
