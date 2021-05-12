@@ -10,25 +10,25 @@ import numpy as np
 import numpy.matlib
 
 stk_2010 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/分析师预测数据（2010-2020）_20200915_203919/rpt_forecast_stk_2010.csv')
+        '/path/rpt_forecast_stk_2010.csv')
 stk_2011 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/分析师预测数据（2010-2020）_20200915_203919/rpt_forecast_stk_2011.csv')
+        '/path/rpt_forecast_stk_2011.csv')
 stk_2012 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/分析师预测数据（2010-2020）_20200915_203919/rpt_forecast_stk_2012.csv')
+        '/path/rpt_forecast_stk_2012.csv')
 stk_2013 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/分析师预测数据（2010-2020）_20200915_203919/rpt_forecast_stk_2013.csv')
+        '/path/rpt_forecast_stk_2013.csv')
 stk_2014 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/分析师预测数据（2010-2020）_20200915_203919/rpt_forecast_stk_2014.csv')
+        '/path/rpt_forecast_stk_2014.csv')
 stk_2015 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/分析师预测数据（2010-2020）_20200915_203919/rpt_forecast_stk_2015.csv')
+        '/path/rpt_forecast_stk_2015.csv')
 stk_2016 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/分析师预测数据（2010-2020）_20200915_203919/rpt_forecast_stk_2016.csv')
+        '/path/rpt_forecast_stk_2016.csv')
 stk_2017 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/分析师预测数据（2010-2020）_20200915_203919/rpt_forecast_stk_2017.csv')
+        '/path/rpt_forecast_stk_2017.csv')
 stk_2019 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/分析师预测数据（2010-2020）_20200915_203919/rpt_forecast_stk_2019.csv')
+        '/path/rpt_forecast_stk_2019.csv')
 stk_2020 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/分析师预测数据（2010-2020）_20200915_203919/rpt_forecast_stk_2020.csv')
+        '/path/rpt_forecast_stk_2020.csv')
 
 stk_total = pd.concat([stk_2010,stk_2011,stk_2012,stk_2013,stk_2014,stk_2015,stk_2016,stk_2017,
                        stk_2019,stk_2020], axis = 0)
@@ -161,29 +161,29 @@ def CreateDF(df,y,m):
 # test_df = CreateDF(stkData1)
 
 stkData1 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/StockBasicData_20200917/data/MonthStockList_20110131.csv')
+        '/path/MonthStockList_20110131.csv')
 stkData2 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/StockBasicData_20200917/data/MonthStockList_20110228.csv')
+        '/path/MonthStockList_20110228.csv')
 stkData3 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/StockBasicData_20200917/data/MonthStockList_20110331.csv')
+        '/path/MonthStockList_20110331.csv')
 stkData4 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/StockBasicData_20200917/data/MonthStockList_20110429.csv')
+        '/path/MonthStockList_20110429.csv')
 stkData5 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/StockBasicData_20200917/data/MonthStockList_20110531.csv')
+        '/path/MonthStockList_20110531.csv')
 stkData6 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/StockBasicData_20200917/data/MonthStockList_20110630.csv')
+        '/path/MonthStockList_20110630.csv')
 stkData7 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/StockBasicData_20200917/data/MonthStockList_20110729.csv')
+        '/path/MonthStockList_20110729.csv')
 stkData8 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/StockBasicData_20200917/data/MonthStockList_20110831.csv')
+        '/path/MonthStockList_20110831.csv')
 stkData9 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管//StockBasicData_20200917/data/MonthStockList_20110930.csv')
+        '/path/MonthStockList_20110930.csv')
 stkData10 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/StockBasicData_20200917/data/MonthStockList_20111031.csv')
+        '/path/MonthStockList_20111031.csv')
 stkData11 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/StockBasicData_20200917/data/MonthStockList_20111130.csv')
+        '/path/MonthStockList_20111130.csv')
 stkData12 = pd.read_csv(
-        '/Users/minjue/Desktop/求职/海通资管/StockBasicData_20200917/data/MonthStockList_20111230.csv')
+        '/path/MonthStockList_20111230.csv')
 '''
 result2011_1 = CreateDF(stkData1,2011,1)
 result2010_2 = CreateDF(stkData2)
@@ -198,7 +198,7 @@ result2010_10 = CreateDF(stkData10)
 result2010_11 = CreateDF(stkData11)
 result2010_12 = CreateDF(stkData12)
 
-result_df = pd.ExcelWriter('/Users/minjue/Desktop/求职/海通资管/CF_Ret_2011.xls')
+result_df = pd.ExcelWriter('/path/CF_Ret_2011.xls')
 result2011_1.to_excel(result_df, sheet_name = '2017.01', index = False)
 result2010_2.to_excel(result_df, sheet_name = '2017.02', index = False)
 result2010_3.to_excel(result_df, sheet_name = '2017.03', index = False)

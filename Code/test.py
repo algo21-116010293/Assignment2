@@ -9,17 +9,17 @@ from scipy import stats
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 
-result_file = pd.read_excel('C:/Users/apple/Desktop/求职/海通资管/test_result.xls',sheet_name = 'RankIC')
+result_file = pd.read_excel('/path/test_result.xls',sheet_name = 'RankIC')
 time = result_file['Time'].tolist()
 '''
 '''
-Rank IC = corr(order(t-1,factor),order(t,return))
+# Rank IC = corr(order(t-1,factor),order(t,return))
 '''
 #2011.1-2020.8
 RankIC2020 = []
 for i in range(1,8):
     sheetname = '%d' %i
-    CF_2011m = pd.read_excel('C:/Users/apple/Desktop/求职/海通资管/CF_Ret_new2020.xls',sheet_name = sheetname)
+    CF_2011m = pd.read_excel('/path/CF_Ret_new2020.xls',sheet_name = sheetname)
     CFRet_rank = list(CF_2011m['CF_Ret'].rank())
     NMonRet_rank = list(CF_2011m['NmonthRet'].rank())
     df_corr = pd.concat([pd.DataFrame(CFRet_rank,columns = ['CF_rank']),pd.DataFrame(NMonRet_rank,columns = ['NMon_rank'])],axis = 1)
@@ -69,7 +69,7 @@ plt.show()
 portRet2015 = []
 for i in range(1,13):
     sheetname = '%d' %i
-    CF = pd.read_excel('C:/Users/apple/Desktop/求职/海通资管/CF_Ret_new2015.xls',sheet_name = sheetname)
+    CF = pd.read_excel('/path/CF_Ret_new2015.xls',sheet_name = sheetname)
     CF = CF.dropna()
     NoStock = round(len(CF)*0.1)
     CF = CF.sort_values(by = ['CF_Ret'])
@@ -100,14 +100,14 @@ plt.ylabel('portforlio return')
 plt.title('CF-Ret月度多空收益率')
 plt.show()
 
-test_df = pd.ExcelWriter('C:/Users/apple/Desktop/求职/海通资管/test_result.xls')
+test_df = pd.ExcelWriter('/path/test_result.xls')
 df_RankIC.to_excel(test_df, sheet_name = 'RankIC', index = False)
 
-portRet_df = pd.ExcelWriter('C:/Users/apple/Desktop/求职/海通资管/portRet_result.xls')
+portRet_df = pd.ExcelWriter('/path/portRet_result.xls')
 df_portRet.to_excel(portRet_df, sheet_name = 'portReturn', index = False)
 portRet_df.save()
 
-CF = pd.read_excel('C:/Users/apple/Desktop/求职/海通资管/CF_Ret_new2012.xls',sheet_name = '1')
+CF = pd.read_excel('/path/CF_Ret_new2012.xls',sheet_name = '1')
 NoStock = round(len(CF)*0.1)
 CF = CF.sort_values(by = ['CF_Ret'])
 data = CF
