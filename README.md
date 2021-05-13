@@ -76,13 +76,13 @@ To visulize,
 From Rank IC and Portforlio Return above, we can see that the performance of CF Return is not that good. However, the statistics in the report [Shared Analyst Coverage:
 Unifying Momentum Spillover Effects](https://github.com/algo21-116010293/Assignment2/blob/main/Shared%20Analyst%20Coverage%20Unifying%20Momentum%20Spillover%20Effects.pdf) is quite good, we think the reasons may come from several respects. 
 
-* **First, the data in this report is from A-Share market while the data in the report is from NYSE, NASDAQ, and NYSE MKT. Different markets will bring different effect. **
+* **First, the data in this report is from A-Share market while the data in the report is from NYSE, NASDAQ, and NYSE MKT. Different markets will bring different effect.**
 
-* **Second, in the report, a stock is considered to be covered by an analyst if the analyst issues at least one FY1 or FY2 earnings forecast for the stock over the past 12 months. However, this repo has not consider the grade that analysts gave to the stock yet. **
+* **Second, in the report, a stock is considered to be covered by an analyst if the analyst issues at least one FY1 or FY2 earnings forecast for the stock over the past 12 months. However, this repo has not consider the grade that analysts gave to the stock yet.**
 
-* **Third, the construction of factor can consider more aspects like the number of analysts that cover the same stock. **
+* **Third, the construction of factor can consider more aspects like the number of analysts that cover the same stock.**
 
-
+Toward these points, further work can be done. Actually, the paper also implied other method try to improve it. 
 
 ## Reference
 The basic paper that this repo base on is [Shared Analyst Coverage:
